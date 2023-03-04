@@ -41,8 +41,8 @@ class TokenSiiApi
                            year,
                            parse_json)
 
-    url = URI("http://agendamepsi.cl/api/v1/token_receiver/therapist_bhe_list")
-    #url = URI("http://localhost:3001/api/v1/token_receiver/therapist_bhe_list") 
+    #url = URI("http://agendamepsi.cl/api/v1/token_receiver/therapist_bhe_list")
+    url = URI("http://localhost:3001/api/v1/token_receiver/therapist_bhe_list") 
 
     https = Net::HTTP.new(url.host, url.port);
     # if testing use_ssl must be commented
