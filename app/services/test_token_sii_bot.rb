@@ -8,7 +8,7 @@ require 'json'
 
 class TestTokenSiiBot
 
-  # TestTokenSiiBot.login("164828611", "FhG5FhG1")
+  # m=TestTokenSiiBot.login("164828611", "FhG5FhG1")
   def self.login(therapist_rut, 
                  password)
     
@@ -21,8 +21,8 @@ class TestTokenSiiBot
                 #'--headless',
                 '--start-maximized']
                 # remember to add --headless
-        browser = Watir::Browser.new :firefox, options: {args: args}
-        #browser = Watir::Browser.new :chrome, options: {args: args}
+        #browser = Watir::Browser.new :firefox, options: {args: args}
+        browser = Watir::Browser.new :chrome, options: {args: args}
       else
         args = ['--no-sandbox',
                 '--disable-extensions',
@@ -30,8 +30,8 @@ class TestTokenSiiBot
                 #'--headless',
                 '--start-maximized']
                 # remember to add --headless
-        browser = Watir::Browser.new :firefox, options: {args: args}
-        #browser = Watir::Browser.new :chrome, options: {args: args}
+        #browser = Watir::Browser.new :firefox, options: {args: args}
+        browser = Watir::Browser.new :chrome, options: {args: args}
       end
 
       now = Time.now
@@ -113,20 +113,20 @@ class TestTokenSiiBot
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
-                #'--headless',
+                '--headless',
                 '--start-maximized']
                 # remember to add --headless
-        browser = Watir::Browser.new :firefox, options: {args: args}
-        #browser = Watir::Browser.new :chrome, options: {args: args}
+        #browser = Watir::Browser.new :firefox, options: {args: args}
+        browser = Watir::Browser.new :chrome, options: {args: args}
       else
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
-                #'--headless',
+                '--headless',
                 '--start-maximized']
                 # remember to add --headless
-        browser = Watir::Browser.new :firefox, options: {args: args}
-        #browser = Watir::Browser.new :chrome, options: {args: args}
+        #browser = Watir::Browser.new :firefox, options: {args: args}
+        browser = Watir::Browser.new :chrome, options: {args: args}
       end
 
       now = Time.now
@@ -581,8 +581,8 @@ class TestTokenSiiBot
   end
 
   # retrieve all created bhe in a given period
-  # TestTokenSiiBot.total_bhe("94684501","freudlacan","11","2021")
-  # TestTokenSiiBot.total_bhe("164828611","FhG5FhG1","11","2021")
+  # m=TestTokenSiiBot.total_bhe("94684501","freudlacan","11","2021")
+  # m=TestTokenSiiBot.total_bhe("164828611","FhG5FhG1","11","2021")
   def self.total_bhe(therapist_rut,
                      password,
                      month,
