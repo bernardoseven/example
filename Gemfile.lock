@@ -258,7 +258,6 @@ GEM
       racc (~> 1.4)
     ntlm-http (0.1.1)
     oj (3.14.2)
-    pg (1.4.5)
     pmap (1.1.1)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
@@ -390,7 +389,6 @@ DEPENDENCIES
   jbuilder
   kimurai
   nokogiri
-  pg (~> 1.1)
   pry
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)

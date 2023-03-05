@@ -18,7 +18,7 @@ class TestTokenSiiBot
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
-                #'--headless',
+                '--headless',
                 '--start-maximized']
                 # remember to add --headless
         #browser = Watir::Browser.new :firefox, options: {args: args}
@@ -27,7 +27,7 @@ class TestTokenSiiBot
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
-                #'--headless',
+                '--headless',
                 '--start-maximized']
                 # remember to add --headless
         #browser = Watir::Browser.new :firefox, options: {args: args}
