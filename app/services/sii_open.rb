@@ -6,14 +6,13 @@ require 'open-uri'
 require 'watir'
 require 'json'
 
-class TestTokenSiiBot
+class SiiOpen
 
-  # m=TestTokenSiiBot.super_open
+  # m=SiiOpen.super_open
   def self.super_open
-    #browser = Watir::Browser.new :chrome
-    #sleep 5
-    #browser.close
-    puts "hola"
+  	browser = Watir::Browser.new :firefox
+  	sleep 5
+  	browser.close
   end
 
   # m=TestTokenSiiBot.login("164828611", "FhG5FhG1", 0)

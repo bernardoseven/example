@@ -62,6 +62,8 @@ gem 'whenever', require: false
 gem 'droplet_kit'
 gem 'block_io'
 gem 'fintoc'
+#gem 'geckodriver'
+gem 'webdrivers'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
