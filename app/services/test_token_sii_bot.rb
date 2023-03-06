@@ -8,26 +8,29 @@ require 'json'
 
 class TestTokenSiiBot
 
-  # m=TestTokenSiiBot.login("164828611", "FhG5FhG1")
+  # m=TestTokenSiiBot.login("164828611", "FhG5FhG1", 0)
+  # firefox == 0
+  # chrome == 1
   def self.login(therapist_rut, 
-                 password)
+                 password,
+                 browser_name)
     
     begin
       
-      if Rails.env.production?
+      if browser_name == 0 
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
-                '--headless',
+                #'--headless',
                 '--start-maximized']
                 # remember to add --headless
-        #browser = Watir::Browser.new :firefox, options: {args: args}
-        browser = Watir::Browser.new :chrome, options: {args: args}
+        browser = Watir::Browser.new :firefox, options: {args: args}
+        #browser = Watir::Browser.new :chrome, options: {args: args}
       else
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
-                '--headless',
+                #'--headless',
                 '--start-maximized']
                 # remember to add --headless
         #browser = Watir::Browser.new :firefox, options: {args: args}
@@ -104,20 +107,23 @@ class TestTokenSiiBot
 
   # j = TestTokenSiiBot.reuse_login("164828611", "FhG5FhG1")
   # j.close
+  # firefox == 0
+  # chrome == 1
   def self.reuse_login(therapist_rut,
-                       password)
+                       password,
+                       browser_name)
 
     begin
       
-      if Rails.env.production?
+      if browser_name == 0
         args = ['--no-sandbox',
                 '--disable-extensions',
                 '--ignore-certificate-errors',
                 '--headless',
                 '--start-maximized']
                 # remember to add --headless
-        #browser = Watir::Browser.new :firefox, options: {args: args}
-        browser = Watir::Browser.new :chrome, options: {args: args}
+        browser = Watir::Browser.new :firefox, options: {args: args}
+        #browser = Watir::Browser.new :chrome, options: {args: args}
       else
         args = ['--no-sandbox',
                 '--disable-extensions',
